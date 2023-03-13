@@ -62,7 +62,7 @@
    INPUT UNIT -> MEMORY UNIT -> OUTPUT UNIT
         ^              ^             ^
         |              |             |
-        |              
+        |              v             |
         +------- CONTROL UNIT -------+
                        |
                       ALU
