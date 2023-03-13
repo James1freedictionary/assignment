@@ -60,7 +60,9 @@
    - HOW COMPUTER WORKS (ដំណើរការនៃ COMPUTER)
    
    INPUT UNIT -> MEMORY UNIT -> OUTPUT UNIT
-        ^
-        |_______ 
-       
-       
+        |              |             |
+        +------- CONTROL UNIT -------+
+                       |
+                      ALU
+                       |
+                    REGISTERS
