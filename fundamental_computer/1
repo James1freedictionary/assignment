@@ -35,16 +35,16 @@
 13. CLIPBOARD, FONT, PARAGRAPH, STYLES, EDITING
 14. 
    INTRODUCTION TO COMPUTER SYSTEM (ណែនាំពី COMPUTER):
-   - COMPUTER FUNDAMENTALS:
-     - INPUT
-     - OUPUT
-     - CPU
-     - MEMORY
+   - COMPUTER FUNDAMENTALS (មូលដ្ឋននៃ COMPUTER):
+     - INPUT UNIT (ទិន្នន័យបញ្ចូល)
+     - OUPUT UNIT (លទ្ធផល)
+     - CPU (ខួរក្បាលនៃ COMPUTER)
+     - MEMORY UNIT (ឧបករណ៍ សម្រាប់ផ្ទុក DATA)
    - COMPUTER DEFINITION (និយមន័យ COMPUTER): 
      - COMPUTER SYSTEM (មាសុីនប្រូក្រាមអេឡិចត្រូនិច ដែល ទទួលយក INPUT ដំណើរការ DATA ផ្តល់ OUTPUT
    - COMPONENTS OF COMPUTER:
-     - HARDWARE: MOUSE, CPU, KEYBOARD ...
-     - SOFTWARE: OS, WORD, EXCEL ...
+     - HARDWARE (ផ្នែករឹង): MOUSE, CPU, KEYBOARD ...
+     - SOFTWARE (កម្មវិធី): OS, WORD, EXCEL ...
     
    - CHARACTERISTIC OF COMPUTER:
      - SPEED
