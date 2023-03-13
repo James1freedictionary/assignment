@@ -57,14 +57,13 @@
      - CONVERT DATA TO INFORMATION (ប្រែទិន្នន័យជាព័ត៍មាន)
      - EXECUTE MACHINE INSTRUCTIONS (ប្រតិបត្តិពាក្យបញ្ជាមាសុីន)
      - UNDERSTAND BINARY (0,1) (យល់ប្រព័ន្ធគោល2)
-   - HOW COMPUTER WORKS (ដំណើរការនៃ COMPUTER)
-   
-   INPUT UNIT -> MEMORY UNIT -> OUTPUT UNIT
-        ^              ^             ^
-        |              |             |
-        |              v             |
-        +------- CONTROL UNIT -------+
-                       |
-                      ALU
-                       |
-                    REGISTERS
+   - HOW COMPUTER WORKS (ដំណើរការនៃ COMPUTER): |
+      INPUT UNIT -> MEMORY UNIT -> OUTPUT UNIT
+           ^              ^             ^
+           |              |             |
+           |              v             |
+           +------- CONTROL UNIT -------+
+                          |
+                         ALU
+                          |
+                       REGISTERS
