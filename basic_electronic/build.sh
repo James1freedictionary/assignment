@@ -1,4 +1,5 @@
 #!/bin/bash -e
+apt install -y fonts-noto
 if tty -s;then echo "yes tty"; else echo "nope tty";fi 
 chmod +x ../transfer.sh
 xelatex 1.tex
