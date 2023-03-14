@@ -2,12 +2,17 @@
 \usepackage{fontspec}
 
 \setmainfont[Ligatures=TeX]{Noto Sans}
-\newfontfamily\kfont{Noto Sans Khmer}
+\newfontfamily\khfont{Noto Sans Khmer}
+\newenvironment{kfont}{\khfont}{\par}
 \author{james1}
 \date{\today}
 \begin{document}
 \begin{enumerate}
-\item \kfont ចរន្តអគ្គីសនីពិតជាបំលាស់ទីនៃអេឡិចត្រុងពីប៉ូល(-)ទៅប៉ូល(+)
-\item me
+\item 
+\begin{kfont}
+ចរន្តអគ្គីសនីពិតជាបំលាស់ទីនៃអេឡិចត្រុងពីប៉ូល(-)ទៅប៉ូល(+)
+\end{kfont}
+\item 
+me
 \end{enumerate}
 \end{document}
