@@ -1,4 +1,4 @@
 #!/bin/bash -e
-chmod +x transfer.sh
-cd basic_electronic
+chmod +x ../transfer.sh
+xelatex 1.tex
 ./../transfer.sh 1.pdf
