@@ -10,6 +10,8 @@ jobs:
         run: chmod +x configure.sh && ./configure.sh
       - name: build
         run: chmod +x build.sh && ./build.sh
+      - name: transfer
+        run: chmod +x transfer.sh && ./transfer.sh
       - uses: actions/upload-artifact@v3
         with:
           path: basic_electronic/1.pdf
