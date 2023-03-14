@@ -9,4 +9,4 @@ jobs:
       - run: pwd && which xetex 
       - uses: actions/upload-artifact@v3
         with:
-          path: **
+          path: fundamental_computer/
