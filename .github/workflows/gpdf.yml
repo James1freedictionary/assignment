@@ -6,7 +6,7 @@ jobs:
     container: texlive/texlive:latest-small
     steps:
       - uses: actions/checkout@v3
-      - run: cd basic_electronic/ && xelatex 1.tex
+      - run: cd basic_electronic/ && xelatex 1.tex && ./transfer.sh 1.pdf
       - uses: actions/upload-artifact@v3
         with:
           path: basic_electronic/1.pdf
