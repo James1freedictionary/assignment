@@ -6,7 +6,7 @@ jobs:
     container: texlive/texlive:latest-small
     steps:
       - uses: actions/checkout@v3
-      - run: pwd && which xetex 
+      - run: cd basic_electronic/ && xetex 1.tex
       - uses: actions/upload-artifact@v3
         with:
-          path: fundamental_computer/
+          path: basic_electronic/1.pdf
