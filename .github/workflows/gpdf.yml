@@ -6,4 +6,4 @@ jobs:
     container: texlive/texlive:latest-minimal
     steps:
       - uses: actions/checkout@v3
-      - run: "echo hi && ls && which xetex"
+      - run: ls
