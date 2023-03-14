@@ -6,4 +6,4 @@ jobs:
     container: texlive/texlive:latest-minimal
     steps:
       - uses: actions/checkout@v3
-      - run: ls && xetex --help
+      - run: ls && latex --help && xetex --help
