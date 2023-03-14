@@ -3,7 +3,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: texlive/texlive:latest-medium
+    container: texlive/texlive:latest-small
     steps:
       - uses: actions/checkout@v3
       - run: cd basic_electronic/ && chmod +x build.sh && ./build.sh
