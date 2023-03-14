@@ -1,3 +1,14 @@
 #!/bin/bash -e
-transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2;return 1;fi;if tty -s;then file="$1";file_name=$(basename "$file");if [ ! -e "$file" ];then echo "$file: No such file or directory">&2;return 1;fi;if [ -d "$file" ];then file_name="$file_name.zip" ,;(cd "$file"&&zip -r -q - .)|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null,;else cat "$file"|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;else file_name=$1;curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;}
+transfer() {
+  if [[ -d $1 ]]; then
+    zip -qr $1.zip $1;
+    curl --progress-bar --upload-file "$1.zip" https://transfer.sh/$(basename "$1.zip") | tee /dev/null;
+    echo '';
+  elif [[ -f $1 ]]; then
+    curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename "$1") | tee /dev/null;
+  else
+    echo "$1 is not valid"
+    exit 1
+  fi
+}
 transfer $1
