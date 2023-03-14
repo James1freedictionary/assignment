@@ -12,7 +12,7 @@ transfer() {
 }
 dir="basic_electronic"
 for e in $dir;do
-echo "transferring in $i"
+echo "transferring in $e"
 for i in $e/*.pdf;do
 echo "transferring $i"
 transfer $i
