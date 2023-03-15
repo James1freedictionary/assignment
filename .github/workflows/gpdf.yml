@@ -14,4 +14,4 @@ jobs:
         run: chmod +x transfer.sh && ./transfer.sh
       - uses: actions/upload-artifact@v3
         with:
-          path: basic_electronic/1.pdf
+          path: **/*.pdf
