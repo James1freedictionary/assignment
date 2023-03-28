@@ -1,6 +1,7 @@
 // copyright (c) 2023 , james1freedictionary
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define flush fflush(stdout);
 #define len(x,t) (sizeof(x)/sizeof(t))
 struct product
@@ -69,78 +70,97 @@ find_length(l,p,count);
 if (l.id >3 ||l.name>6||l.quantity>5||l.price>6||l.amount>6)
 {
 
-
+size_t n_id;
+size_t n_name;
+size_t n_qty;
+size_t n_price;
+size_t n_amount;
+char* s_id;
+char* s_name;
+char* s_qty;
+char* s_price;
+char* s_amount;
 if (l.id>3){
 if (l.id % 3 != 0){
-size_t n_id = ((l.id/3)+1);
+n_id = ((l.id/3)+1);
 } else {
-size_t n_id = l.id/3;
+ n_id = l.id/3;
 } 
-char* s_id;
 s_id = malloc(sizeof(char)*l.id);
 sprintf(s_id,"%u",p[count].id);
 } else {
-size_t n_id = 0;
+ n_id = 0;
 }
 if (l.name > 6){
 if (l.name % 6 != 0){
-size_t n_name =((l.name/6)+1)    ;
+n_name =((l.name/6)+1)    ;
 } else 
 {
-size_t n_name = l.id/6;
+ n_name = l.id/6;
 }
-char* s_name;
+
 s_name = malloc(sizeof(char)*l.name);
 sprintf(s_name,"%s",p[count].name);
 } else {
-size_t s_name = 0;
+ s_name = 0;
 }
 if (l.quantity >5){
 if (l.quantity % 5 != 0){
-size_t n_qty = ((l.quantity/5)+1);}
+ n_qty = ((l.quantity/5)+1);}
 else {
-size_t n_qty = l.quantity/5;
+ n_qty = l.quantity/5;
 }
-char* s_qty;
+
 s_qty = malloc(sizeof(char)*l.quantity);
 sprintf(s_qty,"%u", p[count].quantity);
 } else {
-size_t n_qty = 0;
+ n_qty = 0;
 }
 if (l.price > 6){ 
 if (l.price % 6 != 0)
-{size_t n_price = ((l.price/6)+1);
+{ n_price = ((l.price/6)+1);
 } else {
-size_t n_price = l.price/6;
+ n_price = l.price/6;
 }
-char* s_price;
+
 s_price = malloc(sizeof(char)*l.price);
 sprintf(s_price,"%f",p[count].price);
-}
+} else {n_price = 0}
 if (l.amount > 6){
 if (l.amount % 6 != 0){ 
-size_t n_amount = ((l.amount/6)+1);
+ n_amount = ((l.amount/6)+1);
 } else {
-size_t n_amount = l.amount/6;
+ n_amount = l.amount/6;
 }
-char* s_amount;
+
 s_amount = malloc(sizeof(char)*l.amount);
 } else {
-size_t n_amount = 0;
+ n_amount = 0;
 }
 size_t max1 = max(n_id,n_name);
 size_t max2 = max(n_qty,n_price);
 size_t max3 = max(max1,max2);
 size_t max = max(max3,n_amount);
 
-
-
-
-for (int i=0,id=0,name=0,qty=0,price=0,amount=0;i < max;i++,id+=3,name+06,qty+=5,price+=6,amount+=6
+for (int i=0;i<max;++i)
 {
-printf("%-3u|%-6s|%-5u|%-7g|-7g\n", 
+int next_s_id=0;
+int next_s_name=0;
+int next_s_qty=0;
+int next_s_price=0;
+int next_s_amount=0;
+printf("%-3.3u|%-6.6s|%-5.5u|%-7.7g|%-7.7g\n",
+s_id+next_s_id,s_name+next_s_name,s_qty+next_s_qty,
+s_price+next_s_price,s_amount+next_s_amount);
+
+next_s_id += 3;
+next_s_name +=6;
+next_s_qty +=5;
+next_s_price +=7;
+next_s_amount +=7;
 
 }
+
 
 }else{
 printf("%-3u|%-6s|%-5u|%-7g|%-7g\n",p[count].id,p[count].name,p[count].quantity,p[count].price,p[count].amount);
