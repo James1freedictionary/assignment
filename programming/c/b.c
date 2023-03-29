@@ -32,14 +32,24 @@ puts("****** Program to insert product ******");
  printf("Enter id: ");
  flush
  scanf("%u",&p[count].id);
+ while ( p[count].id == 0) {
+ puts("The id 0 is not allowed");
+ printf("Enter id: ");
+ flush
+ scanf("%u",&p[count].id);
+
+}
+
+
+
  for (int i=0;i<50;i++){ 
-if (count != i && p[count].id == p[i].id)
+
+while (count != i && p[count].id == p[i].id)
 {
  puts("The id is already existed!");
  printf("Enter id: ");
  flush
  scanf("%u", &p[count].id);
- break;
  
 }
 
