@@ -85,7 +85,7 @@ l.price = malloc(sizeof(size_t));
 l.amount = malloc(sizeof(size_t));
 
  find_length(l,p,count);
-printf("%u %u %u %u %u",*l.id,*l.name,*l.quantity,*l.price,*l.amount);
+// printf("%u %u %u %u %u",*l.id,*l.name,*l.quantity,*l.price,*l.amount);
 if (*l.id >3 ||*l.name>6||*l.quantity>5||*l.price>6||*l.amount>6)
 {
 
@@ -179,8 +179,8 @@ s_price+next_s_price,s_amount+next_s_amount);
 next_s_id += 3;
 next_s_name +=6;
 next_s_qty +=5;
-next_s_price +=7;
-next_s_amount +=7;
+next_s_price +=6;
+next_s_amount +=6;
 
 }
 
