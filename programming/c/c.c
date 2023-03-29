@@ -28,6 +28,8 @@ void scan(struct product p[],int count)
 if (count==0){
 
 puts("****** Program to insert product ******");
+puts("****** copyright (c) 2023, james1freedictionary ******");
+puts("****** written by james1freedictionary ******");
 }
  printf("Enter id: ");
  flush
@@ -234,7 +236,7 @@ struct length l;
 char answer[5];
 for (int i= 0;i<50;i++){
  if (i!=0){
- printf("do you insert more product?");
+ printf("Do you insert more product? (yes/no): ");
  flush
  scanf("%s", answer);
  if (strcmp(answer, "n")  == 0 || strcmp(answer,"no") == 0) {
