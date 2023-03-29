@@ -74,9 +74,12 @@ void print(struct product p[],int count, struct length l)
 
 p[count].name[strcspn(p[count].name,"\n")]=0;
 if (count == 0) {
-puts("id | name | qty | price | amount");
+puts(" id  |    name    |  qty  |  price  | amount  ");
 
-puts("---+------+-----+-------+-------");}
+puts("-----+------------+-------+---------+---------");}
+else {
+puts("-----+------------+-------+---------+---------");
+}
 
 l.id = malloc(sizeof(size_t));
 l.name = malloc(sizeof(size_t));
@@ -86,7 +89,7 @@ l.amount = malloc(sizeof(size_t));
 
  find_length(l,p,count);
 // printf("%u %u %u %u %u",*l.id,*l.name,*l.quantity,*l.price,*l.amount);
-if (*l.id >3 ||*l.name>6||*l.quantity>5||*l.price>6||*l.amount>6)
+if (*l.id >3 ||*l.name>10||*l.quantity>5||*l.price>7||*l.amount>7)
 {
 
 size_t n_id;
@@ -120,12 +123,12 @@ n_id = ((*l.id/3)+1);
 } else {
  n_id = 0;
 }
-if (*l.name > 6){
-if (*l.name % 6 != 0){
-n_name =((*l.name/6)+1)    ;
+if (*l.name > 10){
+if (*l.name % 10 != 0){
+n_name =((*l.name/10)+1)    ;
 } else 
 {
- n_name = *l.id/6;
+ n_name = *l.id/10;
 }
 
 } else {
@@ -141,19 +144,19 @@ else {
 } else {
  n_qty = 0;
 }
-if (*l.price > 6){ 
-if (*l.price % 6 != 0)
-{ n_price = ((*l.price/6)+1);
+if (*l.price > 7){ 
+if (*l.price % 7 != 0)
+{ n_price = ((*l.price/7)+1);
 } else {
- n_price = *l.price/6;
+ n_price = *l.price/7;
 }
 
 } else {n_price = 0;}
-if (*l.amount > 6){
-if (*l.amount % 6 != 0){ 
- n_amount = ((*l.amount/6)+1);
+if (*l.amount > 7){
+if (*l.amount % 7 != 0){ 
+ n_amount = ((*l.amount/7)+1);
 } else {
- n_amount = *l.amount/6;
+ n_amount = *l.amount/7;
 }
 } else {
  n_amount = 0;
@@ -162,9 +165,9 @@ size_t max1 = max(n_id,n_name);
 size_t max2 = max(n_qty,n_price);
 size_t max3 = max(max1,max2);
 size_t tmax = max(max3,n_amount);
-printf("tmax: %u",tmax);
-printf("id: %s", s_id);
-printf("name: %s\n", s_name);
+//printf("tmax: %u",tmax);
+//printf("id: %s", s_id);
+//printf("name: %s\n", s_name);
 int next_s_id=0;
 int next_s_name=0;
 int next_s_qty=0;
@@ -172,20 +175,20 @@ int next_s_price=0;
 int next_s_amount=0;
 for (int i=0;i<tmax;++i)
 {
-printf("%-3.3s|%-6.6s|%-5.5s|%-6.6s|%-6.6s\n",
+printf(" %-3.3s | %-10.10s | %-5.5s | %-7.7s | %-7.7s \n",
 s_id+next_s_id,s_name+next_s_name,s_qty+next_s_qty,
 s_price+next_s_price,s_amount+next_s_amount);
 
 next_s_id += 3;
-next_s_name +=6;
+next_s_name +=10;
 next_s_qty +=5;
-next_s_price +=6;
-next_s_amount +=6;
+next_s_price +=7;
+next_s_amount +=7;
 
 }
 
 }else{
-printf("%-3u|%-6s|%-5u|%-7g|%-7g\n",p[count].id,p[count].name,p[count].quantity,p[count].price,p[count].amount);
+printf(" %-3u | %-10s | %-5u | %-7.4f | %-7.4f \n",p[count].id,p[count].name,p[count].quantity,p[count].price,p[count].amount);
 }
 
 
